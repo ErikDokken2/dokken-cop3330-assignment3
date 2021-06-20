@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class main{
++ String myFile
++ TreeMap: wordsMap
+}
+class GenerateOutputString{
++String output
+}
+class MakeTreeMap{
++TreeMap<String, Integer> treeMap
+make a tree map from input file
+}
+class SpaceCount{
++ int spacecount
+}
+class printOutput
+{
+prints out the output of given String
+}
+main --> MakeTreeMap
+MakeTreeMap --> GenerateOutputString
+GenerateOutputString o->SpaceCount
+SpaceCount o-> GenerateOutputString
+GenerateOutputString --> printOutput
+@enduml

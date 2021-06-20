@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class main{
+Call myFile (inputFile)
+Ask user for filename
+}
+
+class CreateString{
+Creats a string from input File
+}
+
+class GenerateOutput{
+Makes the oututString for output
+}
+
+class CreateString{
+Creats a string from input File
+}
+
+main-->CreateString
+main-->readUserInput
+CreateString->oututString
+oututString->GenerateOutput
+readUserInput->GenerateOutput
+@enduml

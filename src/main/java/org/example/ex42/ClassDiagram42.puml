@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class mainFuction{
+calls functions
+}
+class readFileToArrayList{
++reads File given
+}
+mainFuction--> readFileToArrayList
+readFileToArrayList-->ArrayListToString
+ArrayListToString o->MakeSpaceFormating
+MakeSpaceFormating o-> ArrayListToString
+ArrayListToString --> outputString
+@enduml

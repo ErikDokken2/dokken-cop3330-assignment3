@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class main{
+calls readFile
+calls make outputFile
+calls organize names based off of readFile
+output
+}
+class ReadFile{
+Scans File to add to ArrayList
+}
+class makeOutputFile{
+Creats OutputFile with String
+}
+class organize{
+organize input
+}
+class outputString{
+prints output
+}
+ReadFile o-> organize
+main o-> ReadFile
+organize o->outputString
+ outputString --> makeOutputFile
+main --> makeOutputFile
+
+@enduml
